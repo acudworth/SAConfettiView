@@ -52,7 +52,8 @@ open class SAConfettiView: UIView {
         emitter.emitterPosition = CGPoint(x: frame.size.width / 2.0, y: 0)
         emitter.emitterShape = kCAEmitterLayerLine
         emitter.emitterSize = CGSize(width: frame.size.width, height: 1)
-
+        emitter.beginTime = CACurrentMediaTime()
+        
         var cells = [CAEmitterCell]()
         for color in colors {
             cells.append(confettiWithColor(color))
